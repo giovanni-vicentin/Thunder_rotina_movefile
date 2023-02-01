@@ -1,7 +1,7 @@
 import os
 import shutil
 
-def mover_extrato():
+def move_extrato():
     source_dir = "C:\\DOCUMENTOS ROTINA"
     destination_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos"
 
@@ -9,4 +9,4 @@ def mover_extrato():
         if "ExtratoMensal" in filename.split("-")[1]:
             shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
 
-mover_extrato()
+move_extrato()
