@@ -1,42 +1,17 @@
 import os
 import shutil
 
-def move_ferias():
-    source_dir = "C:\\DOCUMENTOS ROTINA"
-    destination_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Ferias"
-
+def move_files(source_dir, destination_dir, search_string):
     for filename in os.listdir(source_dir):
-        if "ProgramaçãodeFérias" in filename.split("-")[1]:
+        if search_string in filename.split("-")[1]:
             shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
 
-move_ferias()
+source_dir = "C:\\DOCUMENTOS ROTINA"
 
-def move_holerites():
-    source_dir = "C:\\DOCUMENTOS ROTINA"
-    destination_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Holerites"
+move_files(source_dir, "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Ferias", "ProgramaçãodeFérias")
 
-    for filename in os.listdir(source_dir):
-        if "RecibodePagamento" in filename.split("-")[1]:
-            shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
+move_files(source_dir, "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Holerites", "RecibodePagamento")
 
-move_holerites()
+move_files(source_dir, "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos", "ExtratoMensal")
 
-def move_extrato():
-    source_dir = "C:\\DOCUMENTOS ROTINA"
-    destination_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos"
-
-    for filename in os.listdir(source_dir):
-        if "ExtratoMensal" in filename.split("-")[1]:
-            shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
-
-move_extrato()
-
-def move_liquidos():
-    source_dir = "C:\\DOCUMENTOS ROTINA"
-    destination_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Liquidos"
-
-    for filename in os.listdir(source_dir):
-        if "RelatóriodeLíquidos" in filename.split("-")[1]:
-            shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
-
-move_liquidos()
+move_files(source_dir, "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Liquidos", "RelatóriodeLíquidos")
