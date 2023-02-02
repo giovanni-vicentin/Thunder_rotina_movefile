@@ -1,3 +1,6 @@
+import os
+import shutil
+
 def move_files_folha(source_dir, destinations):
     for filename in os.listdir(source_dir):
         for keyword, destination_dir in destinations:
