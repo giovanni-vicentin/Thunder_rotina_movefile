@@ -1,3 +1,3 @@
 import os
 import shutil
-from folha.com_movimento import com_movimento
+from folha.relatorios import move_files_relatorios
