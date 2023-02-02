@@ -7,22 +7,20 @@ def move_files_relatorios(source_dir, destination_dir, search_string, adiantamen
             if search_string in filename.split("-")[1]:
                 shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
 
-    source_dir = "C:\\DOCUMENTOS ROTINA"
-
-    if adiantamento:
+    if adiantamento==True:
         search_strings = ["else:RecibodePagamento", "else:ExtratoMensal", "RelatóriodeLíquidos"]
         destination_dirs = [
-            "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\HoleritesA",
-            "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\ExtratosA",
-            "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\LiquidosA",
+            os.path.join(destination_dir, "HoleritesA"),
+            os.path.join(destination_dir, "ExtratosA"),
+            os.path.join(destination_dir, "LiquidosA"),
         ]
     else:
         search_strings = ["ProgramaçãodeFérias", "RecibodePagamento", "ExtratoMensal", "RelatóriodeLíquidos"]
         destination_dirs = [
-            "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Ferias",
-            "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Holerites",
-            "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos",
-            "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Liquidos",
+            os.path.join(destination_dir, "Ferias"),
+            os.path.join(destination_dir, "Holerites"),
+            os.path.join(destination_dir, "Extratos"),
+            os.path.join(destination_dir, "Liquidos"),
         ]
 
     for search_string, destination_dir in zip(search_strings, destination_dirs):
