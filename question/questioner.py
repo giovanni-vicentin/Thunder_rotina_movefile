@@ -1,5 +1,3 @@
-import os
-import shutil
 from folha.test import move_files_relatorios
 
 def ask_adiantamento():

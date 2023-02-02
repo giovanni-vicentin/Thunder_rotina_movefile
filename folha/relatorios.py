@@ -1,26 +1,57 @@
 import os
 import shutil
 
-def move_files_relatorios(source_dir, destination_dir, search_string, adiantamento=False):
-    def __move_files_relatorios(source_dir, destination_dir, search_string):
-        for filename in os.listdir(source_dir):
-            if search_string in filename.split("-")[1]:
-                shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
+source_dir = "C:\\DOCUMENTOS ROTINA"
+destination_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Ferias"
 
-    source_dir = "C:\\DOCUMENTOS ROTINA"
+for filename in os.listdir(source_dir):
+    if "ProgramaçãodeFérias" in filename.split("-")[1]:
+        shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
+source_dir = "C:\\DOCUMENTOS ROTINA"
+destination_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos"
 
-    if adiantamento:
-        __move_files_relatorios(source_dir, "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\HoleritesA", "else:RecibodePagamento")
+for filename in os.listdir(source_dir):
+    if "ExtratoMensal" in filename.split("-")[1]:
+        shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
 
-        __move_files_relatorios(source_dir, "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\ExtratosA", "else:ExtratoMensal")
+source_dir = "C:\\DOCUMENTOS ROTINA"
+destination_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Holerites"
 
-        __move_files_relatorios(source_dir, "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\LiquidosA", "RelatóriodeLíquidos")
-    else:
-        __move_files_relatorios(source_dir, "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Ferias", "ProgramaçãodeFérias")
+for filename in os.listdir(source_dir):
+    if "RecibodePagamento" in filename.split("-")[1]:
+        shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
 
-        __move_files_relatorios(source_dir, "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Holerites", "RecibodePagamento")
+source_dir = "C:\\DOCUMENTOS ROTINA"
+destination_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Liquidos"
 
-        __move_files_relatorios(source_dir, "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos", "ExtratoMensal")
+for filename in os.listdir(source_dir):
+    if "RelatóriodeLíquidos" in filename.split("-")[1]:
+        shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
 
-        __move_files_relatorios(source_dir, "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Liquidos", "RelatóriodeLíquidos")
+source_dir = "C:\\DOCUMENTOS ROTINA"
+destination_dir = "C:\Users\TALST-GiovanniVicent\TALST CONTABILIDADE\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\DominioWebDocumentos\3@ DOING\AvisosVencimento"
 
+for filename in os.listdir(source_dir):
+    if "-AV" in filename.split("-")[1]:
+        shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
+
+source_dir = "C:\\DOCUMENTOS ROTINA"
+destination_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\FGTS"
+
+for filename in os.listdir(source_dir):
+    if "GRF" in filename.split("-")[2]:
+        shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
+
+source_dir = "C:\\DOCUMENTOS ROTINA"
+destination_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\INSS"
+
+for filename in os.listdir(source_dir):
+    if "Guia" in filename.split("-")[2]:
+        shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
+
+source_dir = "C:\\DOCUMENTOS ROTINA"
+destination_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\IRRF"
+
+for filename in os.listdir(source_dir):
+    if "IRRF" in filename.split("-")[1]:
+        shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
