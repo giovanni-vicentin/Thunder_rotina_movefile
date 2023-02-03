@@ -1,20 +1,35 @@
 import os
 import shutil
+def move_files_folha(source_dir, destinations):
+    for filename in os.listdir(source_dir):
+        for keyword, destination_dir in destinations:
+            if keyword in filename.split("-")[1]:
+                shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
+                break
+source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos"
 
-path_1 = r'C:\Users\TALST-GiovanniVicent\TALST CONTABILIDADE\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\DominioWebDocumentos\3@ DOING'
-path_2 = r'C:\Users\TALST-GiovanniVicent\TALST CONTABILIDADE\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\DominioWebDocumentos\4@ DONE'
+destinations = [("ExtratoMensal", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Extratos")]
+move_files_folha(source_dir, destinations)
 
-file_types = [('Extratos', 'ExtratoMensal'),
-              ('Holerites', 'RecibodePagamento'),
-              ('Liquidos', 'RelatóriodeLíquidos'),
-              ('Ferias', 'ProgramaçãodeFérias')]
 
-for file_type in file_types:
-    src_dir = os.path.join(path_1, file_type[0])
-    dest_dir = os.path.join(path_2, file_type[0])
+def move_files_folha(source_dir, destinations):
+    for filename in os.listdir(source_dir):
+        for keyword, destination_dir in destinations:
+            if keyword in filename.split("-")[1]:
+                shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
+                break
+source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\DominioWebDocumentos\\3@ DOING\\Holerites"
 
-    for filename in os.listdir(src_dir):
-        if filename.startswith(file_type[1]) and "-" in filename:
-            src_file = os.path.join(src_dir, filename)
-            dest_file = os.path.join(dest_dir, filename)
-            shutil.move(src_file, dest_file)
+destinations = [("RecibodePagamento", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Holerites")]
+move_files_folha(source_dir, destinations)
+
+def move_files_folha(source_dir, destinations):
+    for filename in os.listdir(source_dir):
+        for keyword, destination_dir in destinations:
+            if keyword in filename.split("-")[1]:
+                shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
+                break
+source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\DominioWebDocumentos\\3@ DOING\\Liquidos"
+
+destinations = [("RelatóriodeLíquidos", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Liquidos")]
+move_files_folha(source_dir, destinations)

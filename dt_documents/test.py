@@ -1,23 +1,27 @@
 import os
 import shutil
-# This function moves files with specific names to their corresponding destination directories.
-# The source directory is specified in the source_dir parameter and the destinations are specified in the destinations parameter as a list of tuples, where each tuple consists of the keyword to search in the file name and the destination directory.
-# The function iterates through all files in the source directory and for each file, it checks if the keyword is in the second part of the filename after the first "-" and moves the file to the corresponding destination directory.
-def move_files_folha(source_dir, destinations):
+
+# Function to move files from one folder to another based on keyword
+def move_files(source_dir, destinations):
     for filename in os.listdir(source_dir):
         for keyword, destination_dir in destinations:
+            # Check if keyword is in the filename
             if keyword in filename.split("-")[1]:
+                # Move the file to the destination folder
                 shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
                 break
 
-# source directory containing the files to be moved
-source_dir = "C:\\DOCUMENTOS ROTINA"
+# Move files from Extratos folder
+source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos"
+destinations = [("ExtratoMensal", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Extratos")]
+move_files(source_dir, destinations)
 
-# list of tuples, each tuple consists of the keyword to search in the file name and the destination directory
-destinations = [("ProgramaçãodeFérias", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Ferias"), 
-                ("ExtratoMensal", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos"),
-                ("RecibodePagamento", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Holerites"),
-                ("RelatóriodeLíquidos", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Liquidos")]
+# Move files from Holerites folder
+source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\DominioWebDocumentos\\3@ DOING\\Holerites"
+destinations = [("RecibodePagamento", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Holerites")]
+move_files(source_dir, destinations)
 
-# call the function to move the files
-move_files_folha(source_dir, destinations)
+# Move files from Liquidos folder
+source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\DominioWebDocumentos\\3@ DOING\\Liquidos"
+destinations = [("RelatóriodeLíquidos", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Liquidos")]
+move_files(source_dir, destinations)
