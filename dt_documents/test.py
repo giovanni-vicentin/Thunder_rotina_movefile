@@ -25,3 +25,8 @@ move_files(source_dir, destinations)
 source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\DominioWebDocumentos\\3@ DOING\\Liquidos"
 destinations = [("RelatóriodeLíquidos", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Liquidos")]
 move_files(source_dir, destinations)
+
+# Move files from Ferias folder
+source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\DominioWebDocumentos\\3@ DOING\\Ferias"
+destinations = [("ProgramaçãodeFérias", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Ferias")]
+move_files(source_dir, destinations)

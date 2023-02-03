@@ -11,4 +11,4 @@ def move_files_dae(source_dir, destinations):
 source_dir = "C:\\DOCUMENTOS ROTINA"
 destinations = [("DAE", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\DAE")]
 
-move_files_av(source_dir, destinations)
+move_files_dae(source_dir, destinations)
