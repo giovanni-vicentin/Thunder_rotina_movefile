@@ -1,14 +1,26 @@
-from folha.test import move_files_relatorios
+from dt_documents.test import Move_files
+from dt_documents.test import Move_files_done
 
-def ask_adiantamento():
-    adiantamento = input("Existe adiantamento? (s/n) ").lower()
-    if adiantamento == "S":
-        return True
+
+def ask_yes_no(input_text):
+    while True:
+        response = input(f'{input_text}Type your answer (yes/no): ').lower()
+        if response == "yes" or "y" or "sim" or "s":
+            return False
+        elif response == "no" or "n" or "nao" or "não":
+            return True
+        else:
+            print('Invalid response, please type again.\n\nTo cancel, type "cancel".\n')
+
+
+def ask_move_files():
+    doing_done = ask_yes_no('Do these documents not go in the "DONE" folder?\n')
+    is_adto = ask_yes_no('Are these documents not "adiantamento" documents?\n')
+
+    if doing_done:
+        Move_files(is_adto)
     else:
-        return False
+        Move_files_done(is_adto)
 
-if __name__ == "__main__":
-    source_dir = "Caminho da pasta de origem"
-    destination_dir = "Caminho da pasta de destino"
-    adiantamento = ask_adiantamento()
-    move_files_relatorios(source_dir, destination_dir, "", adiantamento)
+
+ask_move_files()
