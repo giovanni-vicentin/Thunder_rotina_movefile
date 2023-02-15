@@ -11,17 +11,17 @@ def move_files(source_dir, destinations):
                 shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
                 break
             
-# Move files from Extratos folder
+# Move files from ExtratosA folder
 source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\ExtratosA"
 destinations = [("ExtratoMensal", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\ExtratosA")]
 move_files(source_dir, destinations)
 
-# Move files from Holerites folder
+# Move files from HoleritesA folder
 source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\DominioWebDocumentos\\3@ DOING\\HoleritesA"
 destinations = [("RecibodePagamento", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\HoleritesA")]
 move_files(source_dir, destinations)
 
-# Move files from Liquidos folder
+# Move files from LiquidosA folder
 source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\DominioWebDocumentos\\3@ DOING\\LiquidosA"
 destinations = [("RelatóriodeLíquidos", "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\LiquidosA")]
 move_files(source_dir, destinations)
