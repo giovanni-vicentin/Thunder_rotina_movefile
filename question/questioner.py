@@ -5,10 +5,12 @@ from dt_documents.test import Move_files_done
 def ask_yes_no(input_text):
     while True:
         response = input(f'{input_text}Type your answer (yes/no): ').lower()
-        if response == "yes" or "y" or "sim" or "s":
+        if response == "yes" or response == "y" or response == "sim" or response == "s":
             return False
-        elif response == "no" or "n" or "nao" or "não":
+        elif response == "no" or response == "n" or response == "nao" or response == "não":
             return True
+        elif response == "cancelar" or response == "cancel":
+            exit()
         else:
             print('Invalid response, please type again.\n\nTo cancel, type "cancel".\n')
 

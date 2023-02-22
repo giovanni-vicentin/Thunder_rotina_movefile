@@ -3,7 +3,7 @@ import shutil
 
 
 class Move_files:
-    destinations = {
+    destinations_normal = {
         'ProgramaçãodeFérias': 'C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Ferias',
         'ExtratoMensal': 'C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos',
         'RecibodePagamento': 'C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Holerites',
@@ -28,7 +28,7 @@ class Move_files:
 
     def __init__(self, adto=False):
         self.source_dir = 'C:\\DOCUMENTOS ROTINA'
-        self.destinations = self.destinations if not adto else self.destinations_adto
+        self.destinations = self.destinations_adto if adto else self.destinations_normal
 
     def moving(self):
         for filename in os.listdir(self.source_dir):
@@ -40,12 +40,11 @@ class Move_files:
                 keyword = keyword[1]
 
             if keyword in self.destinations:
-                shutil.move(os.path.join(self.source_dir, filename), os.path.join(self.destinations[keyword], filename))
-
+                shutil.move(os.path.join(self.source_dir, filename), self.destinations[keyword[2]] + '\\' + filename)
 
 class Move_files_done:
     # Define the source and destination directories
-    source_dir = {
+    source_dir_normal = {
         'ProgramaçãodeFérias': 'C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Ferias',
         'ExtratoMensal': 'C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos',
         'RecibodePagamento': 'C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Holerites',
@@ -67,7 +66,7 @@ class Move_files_done:
         'GRF': 'C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\FGTS',
         'Guia': 'C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\INSS',
     }
-    destinations = {
+    destinations_normal = {
         'ProgramaçãodeFérias': 'C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Ferias',
         'ExtratoMensal': 'C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Extratos',
         'RecibodePagamento': 'C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Holerites',
@@ -91,8 +90,8 @@ class Move_files_done:
     }
 
     def __init__(self, adto=False):
-        self.source_dir = self.source_dir if not adto else self.source_dir_adto
-        self.destinations = self.destinations if not adto else self.destinations_adto
+        self.source_dir = self.source_dir_adto if adto else self.source_dir_normal
+        self.destinations = self.destinations_adto if adto else self.destinations_normal
 
     def moving(self):
         for keyword in self.source_dir:
