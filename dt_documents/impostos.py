@@ -13,13 +13,12 @@ def move_files_impostos(source_dir, destinations):
                 shutil.move(os.path.join(source_dir, filename), os.path.join(destination_dir, filename))
                 break
 
+    source_dir = "C:\\DOCUMENTOS ROTINA"
+    destinations = [("GRF",
+                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\FGTS"),
+                    ("Guia",
+                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\INSS"),
+                    ("IRRF",
+                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\IRRF")]
 
-source_dir = "C:\\DOCUMENTOS ROTINA"
-destinations = [("GRF",
-                 "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\FGTS"),
-                ("Guia",
-                 "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\INSS"),
-                ("IRRF",
-                 "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\IRRF")]
-
-move_files_impostos(source_dir, destinations)
+    move_files_impostos(source_dir, destinations)

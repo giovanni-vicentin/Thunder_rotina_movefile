@@ -42,6 +42,7 @@ class Move_files:
             if keyword in self.destinations:
                 shutil.move(os.path.join(self.source_dir, filename), self.destinations[keyword[2]] + '\\' + filename)
 
+
 class Move_files_done:
     # Define the source and destination directories
     source_dir_normal = {
@@ -100,3 +101,6 @@ class Move_files_done:
             files = [f for f in os.listdir(source) if os.path.isfile(os.path.join(source, f))]
             for file in files:
                 shutil.move(os.path.join(source, file), destination)
+
+
+Move_files()
