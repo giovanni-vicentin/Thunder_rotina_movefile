@@ -2,25 +2,21 @@ import os
 import shutil
 
 
-def move_files_folha_done(source_dir, destinations=None):
-    if not os.path.isdir(source_dir):
-        raise ValueError(f"Invalid source directory: {source_dir}")
+def move_folha_adto_done():
+    # Move files from Extratos folder
+    source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\ExtratosA"
+    destinations = [("ExtratoMensal",
+                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\ExtratosA")]
+    move_files_done(source_dir, destinations)
 
-    if destinations is None:
-        destinations = [("ProgramaçãodeFérias",
-                         "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Ferias"),
-                        ("ExtratoMensal",
-                         "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Extratos"),
-                        ("RecibodePagamento",
-                         "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Holerites"),
-                        ("RelatóriodeLíquidos",
-                         "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Liquidos")]
+    # Move files from Holerites folder
+    source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\HoleritesA"
+    destinations = [("RecibodePagamento",
+                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\HoleritesA")]
+    move_files_done(source_dir, destinations)
 
-    for filename in os.listdir(source_dir):
-        for keyword, destination_dir in destinations:
-            if keyword in filename.split("-")[1]:
-                destination_path = os.path.join(destination_dir, filename)
-                if os.path.isfile(destination_path):
-                    raise ValueError(f"Destination file already exists: {destination_path}")
-                shutil.move(os.path.join(source_dir, filename), destination_path)
-                break
+    # Move files from Liquidos folder
+    source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\LiquidosA"
+    destinations = [("RelatóriodeLíquidos",
+                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\LiquidosA")]
+    move_files_done(source_dir, destinations)
