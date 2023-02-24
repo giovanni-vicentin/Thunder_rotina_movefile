@@ -85,7 +85,6 @@ def questionnaire():
                 print('3. Move taxes files to "Doing" folder\n')
                 print('4. Move taxes files to "Done" folder\n')
                 print('5. To exit the automation\n')
-                print("***DON'T FORGET TO CHANGE THE DATE IN THE CODE TO PULL TAXES!!***\n")
 
                 sub_option = input('Enter your sub-option "1", "2", "3", "4" or "5": ')
 

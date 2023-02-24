@@ -16,7 +16,6 @@
 
 1. Sync with the organized folder in the cloud.
 2. Change the local file path to match your Windows user.
-3. Make the necessary changes to the code to pull the desired taxes, such as "FGTS" and "INSS". To do this, you will need to modify the date values in the code.
 <br><br><br><br>
 ## Credits
 

@@ -1,10 +1,25 @@
 import os
 import shutil
+import sys
+
+
+RESET = '\033[0m'
+WHITE = '\033[97m'
+TURQUOISE = '\033[96m'
+LEMON_GREEN = '\033[92m'
 
 
 def move_files_GFIP():
     source_folder = r"C:\Users\TALST-GiovanniVicent\TALST CONTABILIDADE\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\RPA GFIP"
     destination_folder = r"C:\DOCUMENTOS ROTINA"
+
+    # Ask user for the desired value to search for
+    phrase = 'Put the month with 2 digits and the year with 4.\nFor example "072023"\n'
+    final_phrase = 'Enter the value to search for: '
+    error_message = f"{LEMON_GREEN}{phrase}{RESET}{WHITE}{final_phrase}{RESET}"
+    print(error_message, file=sys.stderr)
+
+    value = input('')
 
     # Check if the destination folder exists and create it if not
     if not os.path.exists(destination_folder):
@@ -14,7 +29,7 @@ def move_files_GFIP():
     for root, dirs, files in os.walk(source_folder):
         for file in files:
             # Check if the file name contains the specified pattern
-            if "-022023-GRF" in file:
+            if f'-{value}-GRF' in file:
                 # Copy the file to the destination folder
                 source_file_path = os.path.join(root, file)
                 destination_file_path = os.path.join(destination_folder, file)
@@ -86,6 +101,16 @@ def move_files_dctfweb():
     source_folder = r'C:\Users\TALST-GiovanniVicent\TALST CONTABILIDADE\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\RPA DCTFWEB'
     destination_folder = r'C:\DOCUMENTOS ROTINA'
 
+    # Ask user for the desired value to search for
+    phrase = 'Put the month with 2 digits and the year with 4.\nFor example "072023"\n'
+    final_phrase = 'Enter the value to search for: '
+    error_message = f"{TURQUOISE}{phrase}{RESET}{WHITE}{final_phrase}{RESET}"
+    print(error_message, file=sys.stderr)
+
+    value = input('')
+
+    print('You entered:', value)
+
     # Check if the destination folder exists and create it if not
     if not os.path.exists(destination_folder):
         os.makedirs(destination_folder)
@@ -93,7 +118,7 @@ def move_files_dctfweb():
     # Loop through all subfolders of the source folder
     for root, dirs, files in os.walk(source_folder):
         for file in files:
-            if '-022023-Guia' in file:
+            if f'-{value}-Guia' in file:
                 # Copy the file to the destination folder
                 source_file = os.path.join(root, file)
                 destination_file = os.path.join(destination_folder, file)
