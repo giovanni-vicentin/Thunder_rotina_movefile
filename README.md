@@ -1,6 +1,6 @@
 # *Thunder_rotina_movefile*
 
-#### _Automation created to move files from RPA saves (in cloud) to local folders and move the local folder directly to the organized folders of the labor department synchronized in the cloud, making it easier to send the documents for Eagle to verify or publish._
+#### _This automation is designed to simplify the process of moving files from RPA saves in the cloud to local folders, and then organizing those files into the appropriate folders of the labor department synchronized in the cloud. This streamlines the process of verifying and publishing documents, making it easier to manage and share files._
 
 ## How to use
 
