@@ -10,7 +10,7 @@ LEMON_GREEN = '\033[92m'
 
 
 def move_files_GFIP():
-    source_folder = r"C:\Users\TALST-GiovanniVicent\TALST CONTABILIDADE\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\RPA GFIP"
+    source_folder = r"C:\Users\TALST-GiovanniVicent\OneDrive - TALST CONTABILIDADE\5.7.2 AUTOMACAO\RPA GFIP"
     destination_folder = r"C:\DOCUMENTOS ROTINA"
 
     # Ask user for the desired value to search for
@@ -40,15 +40,15 @@ def move_folha(source_dir="C:\\DOCUMENTOS ROTINA",
                destinations=None):
     if destinations is None:
         destinations = [("ProgramaçãodeFérias",
-                         "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Ferias"),
+                         "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Ferias"),
                         ("ExtratoMensal",
-                         "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos"),
+                         "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos"),
                         ("RecibodePagamento",
-                         "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Holerites"),
+                         "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Holerites"),
                         ("RelatóriodeLíquidos",
-                         "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Liquidos"),
+                         "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Liquidos"),
                         ("AV",
-                         "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\AvisosVencimento")]
+                         "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\AvisosVencimento")]
     for filename in os.listdir(source_dir):
         for keyword, destination_dir in destinations:
             if keyword in filename.split("-")[1]:
@@ -67,38 +67,38 @@ def move_files_done(source_dir, destinations):
 
 def move_folha_done():
     # Move files from Extratos folder
-    source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos"
+    source_dir = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Extratos"
     destinations = [("ExtratoMensal",
-                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Extratos")]
+                     "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Extratos")]
     move_files_done(source_dir, destinations)
 
     # Move files from Holerites folder
-    source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Holerites"
+    source_dir = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Holerites"
     destinations = [("RecibodePagamento",
-                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Holerites")]
+                     "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Holerites")]
     move_files_done(source_dir, destinations)
 
     # Move files from Liquidos folder
-    source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Liquidos"
+    source_dir = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Liquidos"
     destinations = [("RelatóriodeLíquidos",
-                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Liquidos")]
+                     "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Liquidos")]
     move_files_done(source_dir, destinations)
 
     # Move files from Ferias folder
-    source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Ferias"
+    source_dir = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\Ferias"
     destinations = [("ProgramaçãodeFérias",
-                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Ferias")]
+                     "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\Ferias")]
     move_files_done(source_dir, destinations)
 
     # Move files from AvisosVencimento folder
-    source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\AvisosVencimento"
+    source_dir = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\AvisosVencimento"
     destinations = [("AV",
-                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\AvisosVencimento")]
+                     "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\AvisosVencimento")]
     move_files_done(source_dir, destinations)
 
 
 def move_files_dctfweb():
-    source_folder = r'C:\Users\TALST-GiovanniVicent\TALST CONTABILIDADE\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\RPA DCTFWEB'
+    source_folder = r'C:\Users\TALST-GiovanniVicent\OneDrive - TALST CONTABILIDADE\5.7.2 AUTOMACAO\RPA DCTFWEB'
     destination_folder = r'C:\DOCUMENTOS ROTINA'
 
     # Ask user for the desired value to search for
@@ -129,11 +129,11 @@ def move_folha_adto(source_dir="C:\\DOCUMENTOS ROTINA",
                     destinations=None):
     if destinations is None:
         destinations = [("ExtratoMensal",
-                         "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\ExtratosA"),
+                         "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\ExtratosA"),
                         ("RecibodePagamento",
-                         "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\HoleritesA"),
+                         "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\HoleritesA"),
                         ("RelatóriodeLíquidos",
-                         "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\LiquidosA")]
+                         "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\LiquidosA")]
     for filename in os.listdir(source_dir):
         for keyword, destination_dir in destinations:
             if keyword in filename.split("-")[1]:
@@ -143,21 +143,21 @@ def move_folha_adto(source_dir="C:\\DOCUMENTOS ROTINA",
 
 def move_folha_adto_done():
     # Move files from Extratos folder
-    source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\ExtratosA"
+    source_dir = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\ExtratosA"
     destinations = [("ExtratoMensal",
-                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\ExtratosA")]
+                     "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\ExtratosA")]
     move_files_done(source_dir, destinations)
 
     # Move files from Holerites folder
-    source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\HoleritesA"
+    source_dir = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\HoleritesA"
     destinations = [("RecibodePagamento",
-                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\HoleritesA")]
+                     "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\HoleritesA")]
     move_files_done(source_dir, destinations)
 
     # Move files from Liquidos folder
-    source_dir = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\LiquidosA"
+    source_dir = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\LiquidosA"
     destinations = [("RelatóriodeLíquidos",
-                     "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\LiquidosA")]
+                     "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\LiquidosA")]
     move_files_done(source_dir, destinations)
 
 
@@ -166,10 +166,10 @@ def move_impostos():
     source_dir = "C:\\DOCUMENTOS ROTINA"
 
     # Directories where the files should be moved to
-    dest_dir1 = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\INSS"
-    dest_dir2 = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\FGTS"
-    dest_dir3 = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\DAE"
-    dest_dir4 = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\IRRF"
+    dest_dir1 = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\INSS"
+    dest_dir2 = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\FGTS"
+    dest_dir3 = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\DAE"
+    dest_dir4 = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\IRRF"
 
     # Loop through the files in the source directory
     for filename in os.listdir(source_dir):
@@ -208,16 +208,16 @@ def move_impostos():
 
 def move_impostos_done():
     # Directories where the files are located
-    source_dir1 = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\INSS"
-    source_dir2 = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\FGTS"
-    source_dir3 = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\DAE"
-    source_dir4 = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\IRRF"
+    source_dir1 = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\INSS"
+    source_dir2 = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\FGTS"
+    source_dir3 = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\DAE"
+    source_dir4 = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\3@ DOING\\IRRF"
 
     # Directories where the files should be moved to
-    dest_dir1 = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\INSS"
-    dest_dir2 = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\FGTS"
-    dest_dir3 = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\DAE"
-    dest_dir4 = "C:\\Users\\TALST-GiovanniVicent\\TALST CONTABILIDADE\\TALST CONTABILIDADE - 5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\IRRF"
+    dest_dir1 = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\INSS"
+    dest_dir2 = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\FGTS"
+    dest_dir3 = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\DAE"
+    dest_dir4 = "C:\\Users\\TALST-GiovanniVicent\\OneDrive - TALST CONTABILIDADE\\5.7.2 AUTOMACAO\\DominioWebDocumentos\\4@ DONE\\IRRF"
 
     # Loop through the files in the source directories
 
