@@ -19,4 +19,4 @@
 <br><br><br><br>
 ## Credits
 
-#### _This project was created by Giovanni Vicentin for the TALST CONTABILIDADE company. Feel free to use, modify, and distribute this code._
+#### _This project was created by Giovanni Vicentin for the TALST CONTABILIDADE company._
