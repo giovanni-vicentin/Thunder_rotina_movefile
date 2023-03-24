@@ -201,10 +201,6 @@ def move_impostos():
                 source_path = os.path.join(source_dir, filename)
                 shutil.move(source_path, dest_dir4)
 
-        # If the file name does not match any of the above conditions, skip it
-        else:
-            print('f')
-
 
 def move_impostos_done():
     # Directories where the files are located
